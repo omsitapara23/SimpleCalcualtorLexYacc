@@ -1,0 +1,17 @@
+%{
+#include "y.tab.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+%}
+
+%%
+[ \t]+ ;
+[0-9]+ {yylval = atoi(yytext); return INTEGER;}
+- return MINUS;
+* return MULTIPLY
++ return PLUS
+\ return DIVIDE
+%%
+
+int yywrap() {return 1;}
