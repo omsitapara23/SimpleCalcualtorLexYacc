@@ -1,5 +1,6 @@
 %{
 #include <stdio.h>
+#include <math.h>
 void yyerror(char *);
 int yylex(void);
 %}
@@ -10,8 +11,10 @@ int yylex(void);
 %token MINUS
 %token DIVIDE
 %token MULTIPLY
+%token POWER
 %left PLUS MINUS
 %left MULTIPLY DIVIDE
+%right POWER
 
 %%
 
@@ -25,6 +28,7 @@ exp : INTEGER {$$ = $1;}
     | exp DIVIDE exp {$$ = $1 / $3;}
     | exp PLUS exp {$$ = $1 + $3;}
     | '(' exp ')'  {$$ = $2;}
+    | exp POWER exp {$$ = pow($1,$3);}
     ;
 
 %%

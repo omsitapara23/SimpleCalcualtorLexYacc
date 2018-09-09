@@ -50,7 +50,8 @@ extern int yydebug;
     PLUS = 260,
     MINUS = 261,
     DIVIDE = 262,
-    MULTIPLY = 263
+    MULTIPLY = 263,
+    POWER = 264
   };
 #endif
 /* Tokens.  */
@@ -60,6 +61,7 @@ extern int yydebug;
 #define MINUS 261
 #define DIVIDE 262
 #define MULTIPLY 263
+#define POWER 264
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED

@@ -8,11 +8,12 @@ void yyerror(char *);
 
 %%
 [ \t]+ ;
-[0-9]+ {yylval = atoi(yytext); return INTEGER;}
+[0-9]+ {yylval = atoi(yytext); return INTEGER;} 
 \- return MINUS;
 \* return MULTIPLY;
 \+ return PLUS;
 \/ return DIVIDE;
+\^ return POWER;
 [\n] return NEWLINE;
 [()] return *yytext;
 . yyerror("invalid charachter found!");
