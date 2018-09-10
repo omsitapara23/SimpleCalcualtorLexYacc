@@ -46,22 +46,26 @@ extern int yydebug;
   enum yytokentype
   {
     INTEGER = 258,
-    NEWLINE = 259,
-    PLUS = 260,
-    MINUS = 261,
-    DIVIDE = 262,
-    MULTIPLY = 263,
-    POWER = 264
+    VARIABLE = 259,
+    NEWLINE = 260,
+    PLUS = 261,
+    MINUS = 262,
+    DIVIDE = 263,
+    MULTIPLY = 264,
+    POWER = 265,
+    EXIT = 266
   };
 #endif
 /* Tokens.  */
 #define INTEGER 258
-#define NEWLINE 259
-#define PLUS 260
-#define MINUS 261
-#define DIVIDE 262
-#define MULTIPLY 263
-#define POWER 264
+#define VARIABLE 259
+#define NEWLINE 260
+#define PLUS 261
+#define MINUS 262
+#define DIVIDE 263
+#define MULTIPLY 264
+#define POWER 265
+#define EXIT 266
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
